@@ -1,11 +1,13 @@
 package XML;
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import java.io.*;
 
 public class XMLTest {
 
+    @Disabled
     @Test
     public void testReadXmlFile(){
         File xmlFile = new File("/Users/j0l065j/Documents/temp/solrDocs/00085369992051.xml");
@@ -27,5 +29,11 @@ public class XMLTest {
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    @Test
+    public void testFilePathSeparator(){
+        System.out.println(File.separator);
+        System.out.println(File.pathSeparator);
     }
 }
