@@ -36,7 +36,7 @@ public class RunPerfProducer {
                     }
                     String message = sb.toString();
                     ProducerRecord<Long, String> record = new ProducerRecord<Long, String>(IKafkaConstants.TOPIC_NAME, message);
-                    System.out.println("sent message:" + message);
+                    System.out.println(i + "  sent message:" + message);
                     try {
                         RecordMetadata metadata = producer.send(record).get();
                     }
