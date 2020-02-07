@@ -29,12 +29,10 @@ public class RunXMLProducer {
             Producer<Long, String> producer = XMLProducer.createProducer();
             try {
                 RecordMetadata metadata = producer.send(record).get();
-            }
-            catch (ExecutionException e) {
+            } catch (ExecutionException e) {
                 System.out.println("Error in sending record");
                 System.out.println(e);
-            }
-            catch (InterruptedException e) {
+            } catch (InterruptedException e) {
                 System.out.println("Error in sending record");
                 System.out.println(e);
             }
